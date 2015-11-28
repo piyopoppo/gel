@@ -1,0 +1,101 @@
+@charset: 'utf-8';
+
+body {
+	font-family: "HG創英角ﾎﾟｯﾌﾟ体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+#wrapper {
+	width: 620px;
+	margin: auto;
+}
+#gel, #gel-preview {
+	box-shadow: 1px 1px 5px rgba(0,0,0, 0.6);
+	margin: auto;
+	width: 300px;
+	display: block;
+}
+#gel:hover {
+	background: #fe6;
+	cursor: pointer;
+}
+#gel-wrapper {
+	position: relative;
+}
+#gel-wrapper.loading:after {
+	content: 'お待ち下さい';
+	display: block;
+	position: absolute;
+	left: 41%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+}
+#gel-tmp {
+	display: none;
+}
+#color-changers {
+	margin-top: 10px;
+	text-align: center;
+}
+#color-changers > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+#color-changers canvas {
+	width: 100px;
+	height: 118px;
+	cursor: pointer;
+}
+#color-changers canvas:hover {
+	background: #fe6;
+}
+.color-changer > div > span {
+	width: 4em;
+	display: inline-block;
+}
+.color-changer input[type=range] {
+	width: 100px;
+}
+.color-changer input[type=text] {
+	width: 30px;
+}
+.color-changer .red { color: red; }
+.color-changer .green { color: green; }
+.color-changer .blue { color: blue; }
+.notice {
+	text-align: center;
+	padding: 10px;
+}
+#author {
+	margin-top: 30px;
+	text-align: right;
+}
+.tweet-button {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+
+#wrapper {
+	width: 100%;
+}
+#gel-wrapper {
+	width: 50%;
+	margin: auto;
+}
+#gel-wrapper canvas {
+	width: 100%;
+	max-width: 300px;
+}
+#gel-preview {
+	float: left;
+	margin-top: 54px;
+}
+#color-changers:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+}
+
